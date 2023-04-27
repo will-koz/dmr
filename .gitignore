@@ -1,0 +1,5 @@
+# Ignore compiled java files:
+*.class
+
+# Ignore the package directory:
+dmr/
