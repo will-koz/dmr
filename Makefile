@@ -3,7 +3,7 @@ JAVAC := javac
 define FILES
 Printer.java \
 Program.java \
-Question \
+Question.java \
 Quiz.java
 endef
 

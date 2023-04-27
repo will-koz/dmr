@@ -1,9 +1,11 @@
 import dmr.Printer;
+import dmr.Quiz;
 
 public class Program {
 
 public static void main (String[] args) {
-	System.out.println(Printer.prompt());
+	Quiz q = new Quiz ();
+	Printer.prompt(q);
 }
 
 }
