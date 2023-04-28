@@ -11,4 +11,8 @@ public Quiz () {
 	;
 }
 
+public int num_correct_questions () { return 0; } // TEMP
+// public int num_questions () { return questions.size(); }
+public int num_questions () { return 0; } // TEMP
+
 }
