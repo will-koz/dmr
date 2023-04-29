@@ -8,7 +8,19 @@ public class Quiz {
 
 private ArrayList<Question> questions;
 
-public int num_correct_questions () { return 0; } // TEMP
+public int num_answered_questions () {
+	int tally = 0;
+	for (Question q : questions) tally += (q.get_status() != 0) ? 1 : 0;
+	return tally;
+}
+
+public int num_correct_questions () {
+	int tally = 0;
+	for (Question q : questions) tally += (q.get_status() == 1) ? 1 : 0;
+	return tally;
+}
+
+
 public int num_questions () { return questions.size(); }
 
 public void add_question (String com, String con, String q, String t, String[] a, int cor) {
@@ -18,7 +30,7 @@ public void add_question (String com, String con, String q, String t, String[] a
 public void ask_question (String s) {
 	try {
 		Question q = find_question(s);
-		// TODO
+		q.set_status(Printer.ask(q));
 	} catch (NullPointerException e) {
 		System.out.println("Unknown command: " + s);
 	}

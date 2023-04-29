@@ -5,8 +5,8 @@ public class Program {
 
 private static void load_data (Quiz q) {
 	// TEMP
-	String[] cc_ans = { "LOREM", "IPSUM" };
-	q.add_question("cc", "C Compiler", "Lorem Ipsum", "lorem", cc_ans, 0);
+	String[] cc_ans = { "Dont know", "Baby don't hurt me.", "Mutiny on the Bounty", "Start me up" };
+	q.add_question("cc", "C Compiler", "What is love?", "lorem", cc_ans, 1);
 }
 
 public static void main (String[] args) {
