@@ -36,6 +36,12 @@ public void ask_question (String s) {
 	}
 }
 
+public void dump_commands () {
+	for (int i = 0; i < questions.size(); i++)
+		Printer.print_text(questions.get(i).get_command() + " - "
+			+ questions.get(i).get_topic(), i + 1);
+}
+
 public Question find_question (String s) {
 	for (int i = 0; i < questions.size(); i++) {
 		Question q = questions.get(i);

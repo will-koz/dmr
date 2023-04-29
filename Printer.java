@@ -14,6 +14,7 @@ public static int ask (Question q) {
 	// First, print out topic and question
 	print_topic(q.get_topic());
 	print_text(q.get_question());
+	print_text("");
 
 	// Then, shuffle list and find new correct answer
 	String[] answers = q.get_answers();
@@ -61,7 +62,7 @@ public static void print_text (String s, int numbered) {
 			if (numbered != 0) System.out.print(numbered + ".");
 			System.out.print("\t");
 		}
-		System.out.print(s.charAt(idx));
+		if (s.charAt(idx) != '\n') System.out.print(s.charAt(idx));
 		col++;
 		if (s.charAt(idx++) == '\n' || col == size) {
 			System.out.println();
