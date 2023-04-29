@@ -76,7 +76,10 @@ public int parse_command (String s) {
 		return 1; // Exit is requested.
 
 	// TODO formatting / style
-	if (first_command.equals("man")) {
+	if (first_command.equals("help")) {
+		dump_commands();
+	}
+	else if (first_command.equals("man")) {
 		man_question(second_command);
 	}
 	else {
