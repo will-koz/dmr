@@ -16,7 +16,9 @@ private int correct_answer;
 private int status;
 
 public String get_command () { return command; }
+public String get_context () { return context; }
 public int get_status () { return status; }
+public String get_topic () { return topic; }
 
 public Question (String com, String con, String q, String t, String[] a, int cor) {
 	command = com;

@@ -1,6 +1,7 @@
 package dmr;
 
 import java.util.ArrayList;
+import dmr.Printer;
 import dmr.Question;
 
 public class Quiz {
@@ -10,9 +11,17 @@ private ArrayList<Question> questions;
 public int num_correct_questions () { return 0; } // TEMP
 public int num_questions () { return questions.size(); }
 
+public void add_question (String com, String con, String q, String t, String[] a, int cor) {
+	questions.add(new Question(com, con, q, t, a, cor));
+}
+
 public void ask_question (String s) {
-	Question q = find_question(s);
-	// TODO
+	try {
+		Question q = find_question(s);
+		// TODO
+	} catch (NullPointerException e) {
+		System.out.println("Unknown command: " + s);
+	}
 }
 
 public Question find_question (String s) {
@@ -26,8 +35,12 @@ public Question find_question (String s) {
 }
 
 public void man_question (String s) {
-	Question q = find_question(s);
-	// TODO print man information
+	try {
+		Question q = find_question(s);
+		Printer.man(q);
+	} catch (NullPointerException e) {
+		System.out.println("Unknown command: " + s);
+	}
 }
 
 // Goes beyond parsing command, also initiates printing the man information or question
@@ -35,7 +48,7 @@ public int parse_command (String s) {
 	s = s.trim().toLowerCase(); // Make sure to get rid of whitespace
 	int space_location = s.indexOf(" ");
 	String first_command = s;
-	String second_command;
+	String second_command = "";
 	if (space_location > 0) {
 		first_command = s.substring(0, space_location);
 		second_command = s.substring(space_location + 1);
