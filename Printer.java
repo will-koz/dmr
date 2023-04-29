@@ -6,6 +6,14 @@ import dmr.Quiz;
 
 public class Printer {
 
+// Ask a question and return 1 if correct, -1 otherwise
+public static int ask (Question q) {
+	// First, print out topic and question
+	// Then, shuffle list and find new correct answer
+	// Print out answers and prompt user for input
+	// parse input and determine if it is the same as the correct answer
+}
+
 // Print out man information (topic and background)
 public static void man (Question q) {
 	print_topic(q.get_topic());
