@@ -10,8 +10,9 @@ private ArrayList<Question> questions;
 public int num_correct_questions () { return 0; } // TEMP
 public int num_questions () { return questions.size(); }
 
-public void ask_question () {
-	; // TODO
+public void ask_question (String s) {
+	Question q = find_question(s);
+	// TODO
 }
 
 public Question find_question (String s) {
@@ -24,8 +25,9 @@ public Question find_question (String s) {
 	return null;
 }
 
-public void man_question () {
-	; // TODO
+public void man_question (String s) {
+	Question q = find_question(s);
+	// TODO print man information
 }
 
 // Goes beyond parsing command, also initiates printing the man information or question
@@ -42,11 +44,12 @@ public int parse_command (String s) {
 	if (first_command.equals("exit"))
 		return 1; // Exit is requested.
 
+	// TODO formatting / style
 	if (first_command.equals("man")) {
-		; // TODO man
+		man_question(second_command);
 	}
 	else {
-		; // TODO ask question
+		ask_question(first_command);
 	}
 
 	return 0; // Exit is not requested:
