@@ -19,6 +19,6 @@ compile the program and immediately run it, do not `make` as instructed above. I
 
 ## Read More about Dennis Ritchie
 
-[https://en.wikipedia.org/wiki/Dennis_Ritchie](Wikipedia)
+[Wikipedia](https://en.wikipedia.org/wiki/Dennis_Ritchie)
 
-[https://www.britannica.com/biography/Dennis-M-Ritchie](Encyclopedia Britannica)
+[Encyclopedia Britannica](https://www.britannica.com/biography/Dennis-M-Ritchie)
