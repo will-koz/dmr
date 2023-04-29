@@ -3,3 +3,6 @@
 
 # Ignore the package directory:
 dmr/
+
+# Ignore the submittable output
+final.txt
