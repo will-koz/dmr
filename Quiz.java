@@ -31,9 +31,7 @@ public void ask_question (String s) {
 	try {
 		Question q = find_question(s);
 		q.set_status(Printer.ask(q));
-	} catch (NullPointerException e) {
-		System.out.println("Unknown command: " + s);
-	}
+	} catch (NullPointerException e) { System.out.println("Unknown command: " + s); }
 }
 
 public void dump_commands () {
@@ -56,9 +54,7 @@ public void man_question (String s) {
 	try {
 		Question q = find_question(s);
 		Printer.man(q);
-	} catch (NullPointerException e) {
-		System.out.println("Unknown command: " + s);
-	}
+	} catch (NullPointerException e) { System.out.println("Unknown command: " + s); }
 }
 
 // Goes beyond parsing command, also initiates printing the man information or question
@@ -72,19 +68,11 @@ public int parse_command (String s) {
 		second_command = s.substring(space_location + 1);
 	}
 
-	if (first_command.equals("exit"))
-		return 1; // Exit is requested.
+	if (first_command.equals("exit")) return 1; // Exit is requested.
 
-	// TODO formatting / style
-	if (first_command.equals("help")) {
-		dump_commands();
-	}
-	else if (first_command.equals("man")) {
-		man_question(second_command);
-	}
-	else {
-		ask_question(first_command);
-	}
+	if (first_command.equals("help")) dump_commands();
+	else if (first_command.equals("man")) man_question(second_command);
+	else ask_question(first_command);
 
 	return 0; // Exit is not requested:
 }
