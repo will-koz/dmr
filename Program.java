@@ -74,9 +74,7 @@ public static void main (String[] args) {
 
 	int exit_requested = 0;
 
-	while (exit_requested == 0) {
-		exit_requested = q.parse_command(Printer.prompt(q));
-	}
+	while (exit_requested == 0) exit_requested = q.parse_command(Printer.prompt(q));
 }
 
 }
