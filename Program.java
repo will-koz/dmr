@@ -66,8 +66,8 @@ public static void main (String[] args) {
 	            + " programmer who is known for developing the C language and Unix operating"
 	            + " system. This quiz is in the form of a Unix shell. You can use `man` followed by"
 	            + " a command to learn more about his life and the Unix operating system. Enter a"
-	            + " command when you are ready to answer a question about him.\n\nHere are the"
-	            + " commands:\n";
+	            + " command when you are ready to answer a question about him. (You can type `exit`"
+				+ " when you want to leave.)\n\nHere are the commands:\n";
 
 	Printer.print_text(help);
 	q.dump_commands();
