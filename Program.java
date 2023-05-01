@@ -57,8 +57,6 @@ private static void load_data (Quiz q) {
 }
 
 public static void main (String[] args) {
-	// TODO add README and license
-
 	Quiz q = new Quiz ();
 	load_data(q);
 
